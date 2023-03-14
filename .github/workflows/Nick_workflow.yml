@@ -54,4 +54,4 @@ jobs:
           python Nick.py $a $b
 
       - name: This is Naman
-          run: echo Hello, Naman. This is Windows.
+        run: echo Hello, Naman. This is Windows.

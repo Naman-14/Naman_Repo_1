@@ -8,11 +8,11 @@ on:
 
   workflow_dispatch:
     inputs:
-      a:
+      input1:
         description: 'Enter first variable'
         required: true
         
-      b:
+      input2:
         description: 'Enter second variable'
         required: true
         

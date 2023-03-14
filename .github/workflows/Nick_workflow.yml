@@ -1,0 +1,53 @@
+name: NickWorkflow
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow dispatch:
+    inputs:
+      a:
+        description: 'Enter first variable'
+        required: true
+        
+      b:
+        description: 'Enter second variable'
+        required: true
+        
+
+env:
+  a: ${{github.event.inputs.input1}}
+  b: ${{github.event.inputs.input2}}
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - run: python ./Python Scripts/Nick.py $a $b
+
+      - name: This is Naman
+        run: echo Hello, Naman. This is Ubuntu.
+
+
+  job2:
+      runs-on: windows-latest
+
+      steps:
+        - uses: actions/checkout@v3
+
+        - uses: actions/setup-python@v4
+          with:
+            python-version: '3.10' 
+        - run: python ./Python Scripts/Nick.py $a $b
+
+        - name: This is Naman
+          run: echo Hello, Naman. This is Windows.

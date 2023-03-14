@@ -40,18 +40,18 @@ jobs:
         run: echo Hello, Naman. This is Ubuntu.
 
 
-  job2:
-    runs-on: windows-latest
+  # job2:
+  #   runs-on: windows-latest
 
-    steps:
-      - uses: actions/checkout@v3
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' 
-      - run: |
-          cd Python Scripts
-          python Nick.py $a $b
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10' 
+  #     - run: |
+  #         cd Python Scripts
+  #         python Nick.py $a $b
 
-      - name: This is Naman
-        run: echo Hello, Naman. This is Windows.
+  #     - name: This is Naman
+  #       run: echo Hello, Naman. This is Windows.

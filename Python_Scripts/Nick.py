@@ -1,5 +1,5 @@
 import sys
 
-a=int(input("Enter first number:"))
-b=int(input("Enter second number:"))
-print("Result",a+b)
+a=int(sys.argv[1])
+b=int(sys.argv[2])
+print('Result',(a+b))
